@@ -47,7 +47,9 @@ class Chef
             source src
             checksum chk
           end
-          dpkg_package dst
+          dpkg_package dst do
+              options '--skip-same-version'
+          end
         end
 
         #

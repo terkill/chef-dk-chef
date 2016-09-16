@@ -23,3 +23,6 @@ chef_dk 'chef_dk' do
   package_url node['chef_dk']['package_url']
   global_shell_init node['chef_dk']['global_shell_init']
 end
+link '/usr/bin/chef-client' do
+    to '/opt/chef/bin/chef-client'
+end
